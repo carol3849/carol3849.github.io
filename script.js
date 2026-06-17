@@ -5,7 +5,7 @@ const translations = {
     navWorks: "事蹟",
     navContact: "聯絡",
     heroEyebrow: "互動設計師 / AI 創作者 / 夜型實驗家",
-    heroName: "林諾瓦",
+    heroName: "林諾亞",
     heroAlias: "把資料變成會呼吸的介面。",
     heroIntro: "我是一位虛構的產品設計師，擅長把 AI、視覺敘事與前端原型整合成快速、有溫度、可被使用的數位體驗。",
     heroCta: "開始合作",
