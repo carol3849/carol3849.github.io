@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nova Lin 的雙語個人電子名片網站。">
+  <title>Nova Lin | Personal Card</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-light" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Nova Lin">
+      <span class="brand-mark">N</span>
+      <span data-i18n="brand">Nova Lin</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#about" data-i18n="navAbout">關於</a>
+      <a href="#works" data-i18n="navWorks">事蹟</a>
+      <a href="#contact" data-i18n="navContact">聯絡</a>
+    </nav>
+
+    <div class="actions" aria-label="Page controls">
+      <button class="pill-button" id="langToggle" type="button" aria-label="Switch language">EN</button>
+      <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle color theme">
+        <span class="sun" aria-hidden="true"></span>
+        <span class="moon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-panel" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow reveal" data-i18n="heroEyebrow">互動設計師 / AI 創作者 / 夜型實驗家</p>
+        <h1 id="hero-title" class="hero-title reveal">
+          <span data-i18n="heroName">林諾瓦</span>
+          <span class="gradient-text" data-i18n="heroAlias">把資料變成會呼吸的介面。</span>
+        </h1>
+        <p class="hero-subtitle reveal" data-i18n="heroIntro">
+          我是一位虛構的產品設計師，擅長把 AI、視覺敘事與前端原型整合成快速、有溫度、可被使用的數位體驗。
+        </p>
+        <div class="hero-cta reveal">
+          <a class="primary-button" href="#contact" data-i18n="heroCta">開始合作</a>
+          <a class="secondary-button" href="#works" data-i18n="heroSecondary">查看事蹟</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Abstract portrait of Nova Lin">
+        <div class="orbital orbital-a"></div>
+        <div class="orbital orbital-b"></div>
+        <div class="portrait-card">
+          <div class="portrait-glow"></div>
+          <div class="portrait">
+            <div class="face"></div>
+            <div class="hair"></div>
+            <div class="visor"></div>
+            <div class="jacket"></div>
+          </div>
+          <div class="metric-chip chip-one">
+            <strong>98%</strong>
+            <span data-i18n="chipFlow">Flow</span>
+          </div>
+          <div class="metric-chip chip-two">
+            <strong>24</strong>
+            <span data-i18n="chipLabs">Labs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-strip" aria-label="Profile highlights">
+      <div class="strip-item">
+        <span class="number" data-count="7">0</span>
+        <span data-i18n="statYears">年跨域創作</span>
+      </div>
+      <div class="strip-item">
+        <span class="number" data-count="42">0</span>
+        <span data-i18n="statProjects">個原型專案</span>
+      </div>
+      <div class="strip-item">
+        <span class="number" data-count="16">0</span>
+        <span data-i18n="statTalks">場分享講座</span>
+      </div>
+    </section>
+
+    <section id="about" class="section-panel split-section">
+      <div>
+        <p class="eyebrow" data-i18n="aboutEyebrow">About Me</p>
+        <h2 data-i18n="aboutTitle">關於我</h2>
+      </div>
+      <div class="rich-copy">
+        <p data-i18n="aboutBody1">
+          Nova Lin 是一位不存在但很忙的創作者。她白天替新創設計產品原型，晚上把城市聲音、天氣資料與手寫筆記轉成互動裝置。
+        </p>
+        <p data-i18n="aboutBody2">
+          她相信好的介面像一台安靜但強大的筆電：看起來克制，裡面卻有清楚的節奏、速度與情緒。
+        </p>
+      </div>
+    </section>
+
+    <section class="feature-grid section-panel" aria-labelledby="feature-title">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="skillsEyebrow">Signal Stack</p>
+        <h2 id="feature-title" data-i18n="skillsTitle">擅長把複雜事物變漂亮，也變清楚。</h2>
+      </div>
+
+      <article class="feature-card kinetic-card">
+        <span class="card-index">01</span>
+        <h3 data-i18n="skill1Title">AI 產品原型</h3>
+        <p data-i18n="skill1Body">設計聊天代理、資料摘要工具與創意工作流，讓模型輸出變成可靠的使用者體驗。</p>
+      </article>
+      <article class="feature-card kinetic-card">
+        <span class="card-index">02</span>
+        <h3 data-i18n="skill2Title">互動視覺</h3>
+        <p data-i18n="skill2Body">用動畫、聲音與資料視覺化創造有節奏的敘事，從網站到展場都能流暢運作。</p>
+      </article>
+      <article class="feature-card kinetic-card">
+        <span class="card-index">03</span>
+        <h3 data-i18n="skill3Title">前端實驗</h3>
+        <p data-i18n="skill3Body">以原生 Web 技術快速搭建高擬真 demo，重視性能、可近用性與小螢幕體驗。</p>
+      </article>
+    </section>
+
+    <section id="works" class="section-panel timeline-section" aria-labelledby="works-title">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="worksEyebrow">Milestones</p>
+        <h2 id="works-title" data-i18n="worksTitle">虛構但很像真的事蹟</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <time>2026</time>
+          <h3 data-i18n="work1Title">獲選「Future Interface 30」</h3>
+          <p data-i18n="work1Body">以即時資料敘事作品《Pulse Atlas》入選年度互動設計名單。</p>
+        </article>
+        <article class="timeline-item">
+          <time>2025</time>
+          <h3 data-i18n="work2Title">打造 AI 編輯室儀表板</h3>
+          <p data-i18n="work2Body">協助虛構媒體團隊把研究、寫作、審稿壓縮成一條透明工作流。</p>
+        </article>
+        <article class="timeline-item">
+          <time>2024</time>
+          <h3 data-i18n="work3Title">城市聲音展「Noisy Garden」</h3>
+          <p data-i18n="work3Body">把捷運、雨聲與市場叫賣轉成可觸控的發光地圖。</p>
+        </article>
+        <article class="timeline-item">
+          <time>2023</time>
+          <h3 data-i18n="work4Title">開源微互動套件</h3>
+          <p data-i18n="work4Body">發布 80 個可重用的互動樣式，讓設計師更快做出有生命感的頁面。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-panel showcase" aria-label="Animated personality dashboard">
+      <div class="showcase-screen">
+        <div class="scanline"></div>
+        <div class="dashboard-top">
+          <span data-i18n="dashboardTitle">Creative Runtime</span>
+          <span class="live-dot" data-i18n="dashboardLive">LIVE</span>
+        </div>
+        <div class="bars">
+          <span style="--h:82%"></span>
+          <span style="--h:48%"></span>
+          <span style="--h:96%"></span>
+          <span style="--h:67%"></span>
+          <span style="--h:74%"></span>
+        </div>
+        <div class="radar">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="showcase-copy">
+        <p class="eyebrow" data-i18n="personalityEyebrow">Personality OS</p>
+        <h2 data-i18n="personalityTitle">冷靜規劃，華麗執行。</h2>
+        <p data-i18n="personalityBody">她的工作節奏像一段精準的動畫時間軸：先把問題拆清楚，再讓每個畫面、資料與按鈕各就各位。</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section-panel contact-section" aria-labelledby="contact-title">
+      <div>
+        <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
+        <h2 id="contact-title" data-i18n="contactTitle">讓下一個原型開始發光。</h2>
+        <p data-i18n="contactBody">歡迎丟來產品想法、展覽邀約、AI 實驗，或只是一杯很好喝的拿鐵情報。</p>
+      </div>
+      <div class="contact-card">
+        <a href="mailto:nova.lin@example.com">nova.lin@example.com</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn / nova-lin-lab</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram / @novalabs</a>
+        <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub / nova-interface</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span data-i18n="footer">© 2026 Nova Lin. Fictional profile, real frontend energy.</span>
+  </footer>
+</body>
+</html>
